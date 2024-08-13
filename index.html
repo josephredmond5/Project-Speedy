@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Project Speedy Blog</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Project Speedy</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    
-    <p>Project Speedy</p>
+<header>
+    <div class="nav container">
+        <a href="#" class="logo">Sp<span>eedy</span></a> <!-- Fixed href -->
+        <a href="#" class="login">Login</a>
+    </div> <!-- Correctly placed closing </div> tag -->
+</header>
+
+    <section class="home" id="home">
+        <div class="home-text container">
+            <h2 class="home-title">The Speedy Blog</h2>
+            <span class="home-subtitle">Your source of Speed</span>
+        </div>
+    </section>
+    <div class="post-filter container">
+        <span class="filter-item active-filter" data-filter='all'>All</span>
+        <span class="filter-item" data-filter='Design'>Design</span>
+        <span class="filter-item" data-filter='Tech'>Tech</span>
+        <span class="filter-item" data-filter='Mobile'>Mobile</span>
+    </div>
+
+
+
+
+
     <script src="main.js"></script>
 </body>
 </html>

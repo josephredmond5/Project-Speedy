@@ -1,4 +1,135 @@
-p {
-    color: grey;
-    font-size: 190px;
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* Global Styles */
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --container-color: #1a1e21;
+    --second-color: grey;
+    --text-color: #172317;
+    --bg-color: #fff;
+}
+
+::selection {
+    color: var(--bg-color);
+    background: var(--second-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding: 3rem 0 2rem;
+}
+
+/* Adjust container to have no extra margins or padding */
+.container {
+    max-width: 1068px;
+    margin: 0 auto; /* Center container horizontally */
+    padding: 0; /* Ensure no padding is applied */
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+}
+
+/* Keep space-between to align logo on the left and login on the right */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Keeps "Speedy" on the left and "Login" on the right */
+    padding: 18px 0;
+}
+
+/* Move the logo further to the left */
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--bg-color);
+    margin-left: 0;
+    padding-left: 0; /* Remove padding to align left */
+}
+
+.home-text {
+    text-align: left; /* Align text to the left */
+    margin-left: 0; /* Ensure no extra margin is pushing the text right */
+    padding-left: 0; /* Remove padding to move text as far left as possible */
+}
+
+.logo span {
+    color: var(--second-color);
+}
+
+.login {
+    padding: 8px 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 4px;
+    background: var(--second-color);
+    color: var(--bg-color); /* Fixed typo: changed var(--big-color) to var(--bg-color) */
+}
+
+.login:hover {
+    background: hsl(24, 98%, 58%);
+    transition: 0.3s;
+}
+.home{
+    width: 100%;
+    min-height: 440px;
+    background: var(--container-color);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.home-text{
+    color: var(--bg-color);
+    text-align: center;
+}
+.home-title{
+    font-size: 3.5rem;
+}
+.home-subtitle{
+    font-size: 1rem;
+    font-weight: 400;
+}
+.post-filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.5rem;
+    margin-top: 2rem !important;
+}
+.filter-item {
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.active-filter {
+    background: var(--second-color);
+    color: var(--bg-color);
+    padding: 4px 10px;
+    border-radius: 4px;
 }
